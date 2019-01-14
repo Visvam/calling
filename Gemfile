@@ -27,4 +27,5 @@ end
 
 group :development do
   gem 'pry-rails'
+  gem 'byebug'
 end

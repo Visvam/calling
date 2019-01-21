@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
-  root 'login#new'
+  root 'sessions#new'
 
-  post 'login/new' => 'login#create'
-  #get 'login/create' => 'dashboard#index'
+  # get 'login/new' => 'login#signup'
+  # post 'login/new' => 'login#save'
+   post 'login/signup' => 'login#create'
+  get 'login/save' => 'home#index'
+  post 'login/save' => 'home#index' 
+
+
+  get 'sessions/new'
+  #get    'login/new' => 'sessions#new'
+  post   'sessions/new' => 'sessions#create'
+  get 'sessions/create' => 'dashboard#index'
+  delete '/logout',  to: 'sessions#destroy'
 
   #get 'dashboard/index' => 'dashboard#index'
   
@@ -12,4 +22,5 @@ Rails.application.routes.draw do
 
   resources :tickets, only: [:create]
   resources :login
+  resources :home
 end

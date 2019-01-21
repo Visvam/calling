@@ -1,9 +1,13 @@
-<%= form_for :login, :url => {:controller => "login", :action => "create"} do |f| %>
+<%= form_for :login, :url => {:controller => "sessions", :action => "create"} do |f| %>
   <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+  <%= f.text_field :name,:autocomplete => :off %><br />
 
   <%= f.label :password %>:
   <%= f.password_field :password %><br />
 
   <%= f.submit  %>
 <% end %>
+ <br>
+ <br>
+
+ 

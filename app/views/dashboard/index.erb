@@ -1,8 +1,9 @@
-<h2>Support Tickets</h2>
+<h2>Tweets</h2>
 
 <p class="lead">
-This is the list of most recent support tickets. Click the "Call customer" button to start a phone call from your browser.
+This is the list of tweets. Click the "Call" button to start a phone call from your browser.
 </p>
+
 
 <div class="row">
   <div class="col-md-4 col-md-push-8">
@@ -26,7 +27,7 @@ This is the list of most recent support tickets. Click the "Call customer" butto
     <% @tickets.each do |ticket| %>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Ticket #<%= ticket.id %>  <small class="pull-right"><%= ticket.created_at %></small></h3>
+        <h3 class="panel-title">User #<%= ticket.id %>  <small class="pull-right"><%= ticket.created_at %></small></h3>
       </div>
 
       <div class="panel-body">
@@ -34,13 +35,13 @@ This is the list of most recent support tickets. Click the "Call customer" butto
         <div class="pull-right">
           <button onclick="callCustomer('<%= ticket.phone_number %>')" type="button" class="btn btn-primary btn-lg call-customer-button">
             <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-            Call customer
+            Call 
           </button>
         </div>
 
         <p><strong>Name:</strong> <%= ticket.name %></p>
         <p><strong>Phone number:</strong> <%= ticket.phone_number %></p>
-        <p><strong>Description:</strong></p>
+        <p><strong>Tweets:</strong></p>
         <%= ticket.description %>
       </div>
     </div>

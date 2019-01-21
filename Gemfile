@@ -15,6 +15,7 @@ end
 
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
+gem 'simple_form'
 gem 'turbolinks'
 gem 'twilio-ruby', '~> 5.17.0'
 
@@ -28,4 +29,5 @@ end
 group :development do
   gem 'pry-rails'
   gem 'byebug'
+  
 end

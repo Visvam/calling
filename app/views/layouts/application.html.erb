@@ -27,7 +27,15 @@
 
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<%= dashboard_path %>">Support dashboard</a></li>
+            <li><a href="<%= dashboard_path %>">Support dashboard</a>
+              <% if logged_in? %> 
+             <li>
+                <%= current_user.name %>
+                <%= link_to "Log out", logout_path, method: :delete %>
+              </li>
+              
+        <% end %>
+            </li>
           </ul>
         </div>
       </div>
